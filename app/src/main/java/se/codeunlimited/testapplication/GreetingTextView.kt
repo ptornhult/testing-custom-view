@@ -5,7 +5,7 @@ import android.util.AttributeSet
 import android.widget.TextView
 import androidx.annotation.VisibleForTesting
 
-class GreetingTextView @JvmOverloads constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int = 0) : TextView(context, attrs, defStyleAttr) {
+class GreetingTextView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : TextView(context, attrs, defStyleAttr) {
 
     var name: String? = null
         set(name) {
@@ -27,6 +27,5 @@ class GreetingTextView @JvmOverloads constructor(context: Context, attrs: Attrib
         text = if (name.isNullOrBlank()) "Hello" else "Hello $name"
     }
 
-    @VisibleForTesting
-    fun clean(name: String?): String? = name?.trim()
+    private fun clean(name: String?): String? = name?.trim()
 }
