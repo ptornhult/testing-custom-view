@@ -53,4 +53,10 @@ class GreetingTextViewTest {
         assertNull(greetingTextView.name)
         assertEquals("Hello", greetingTextView.text)
     }
+
+    @Test
+    fun `clicking the text shows "How are you?"`() {
+        greetingTextView.performClick()
+        assertEquals("How are you?", greetingTextView.text)
+    }
 }
