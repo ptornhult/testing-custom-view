@@ -1,4 +1,3 @@
-# Testing Custom Views with Robolectric
+# Testing Custom Views with Robolectric 4
 
-This project contains a simple custom text view. This will be tested using Robolectric and MockK for UI related functionality and Unit tested for anything not requiring a context nor UI related
-
+This project contains a simple custom text view which will be tested using Robolectric
